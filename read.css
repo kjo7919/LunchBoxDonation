@@ -368,6 +368,17 @@ div.btns {
     width: 100px;
     cursor: pointer;
 }
+.test1{
+    background-image: url("https://file.rankingdak.com/image/RANK/BANNER/GNB_ICON/20220330/IMG1648CEL614146730.png");
+    display: inline-block;
+    width: 90px;
+    height: 17px;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+    top: 17px;
+    left: -11px;
+}
 
 /* category */
 
@@ -611,7 +622,7 @@ ol, ul {
     padding: 23px 0 25px;
     font-size: 13px;
     line-height: 16px;
-    text-aligna: center;
+    text-align: center;
     color: #999;
 }
 
@@ -782,19 +793,193 @@ ol, ul {
     line-height: 20px;
     font-weight: bolder;
 }
-
-.test1{
-    background-image: url("https://file.rankingdak.com/image/RANK/BANNER/GNB_ICON/20220330/IMG1648CEL614146730.png");
-    display: inline-block;
-    width: 90px;
-    height: 17px;
-    overflow: hidden;
-    background-size: cover;
-    position: relative;
-    top: 17px;
-    left: -11px;
-}
 /* header */
+
+
+.item-total{
+    text-align: left;
+    display: flex;
+}
+
+.item-img{
+    margin-top: 84px;
+}
+
+
+.item-big-img{
+    width: 472px;
+    margin-left: 500px;
+    
+}
+.item-big-banner{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 494px;
+}
+
+.item-title{
+    margin-top: 80px;
+    margin-left: 48px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.item-star{
+    background-image: url(https://www.rankingdak.com/resources/pc/images/icon/ico_rating.png);
+    width: 6%;
+    height: 23px;
+    margin-top: 130px;
+    margin-left: -365px;
+    overflow: hidden;
+    background-position: 0% 47%;
+}
+
+.item-price{
+    display: flex;
+    margin-top: 160px;
+    margin-left: -120px;
+}
+
+.item-price > div{
+    font-weight: bolder;
+}
+.price1{
+    color: #ff6001;
+    font-size: 35px;
+}
+
+.percent{
+    color: #ff6001;
+    font-size: 20px;
+}
+
+.price2{
+    font-size: 35px;
+    word-spacing: 0px;
+}
+
+.price3{
+    font-size: 18px;
+    margin-top: 19px;
+    text-decoration: line-through;
+}
+
+.badge{
+    margin-top: 50px;
+    margin-left: -280px;
+}
+
+.badge > img{
+    width: 63px;
+    height: 24px;
+}
+
+
+
+.orange-members{
+    display: flex;
+    background-color: #f8f8f8;
+    height: 60px;
+    margin-top: 273px;
+    width: 500px;
+    margin-left: -64px;
+    border-radius: 5px;
+    line-height: 30px;
+}
+
+
+.test {
+    background-image: url(https://www.rankingdak.com/resources/pc/images/icon/ico_bullet.png);
+    width: 28px;
+    height: 27px;
+    background-position: -120px -136px;
+    outline: none;
+    border-color: #f8f8f8;
+    background-color: #f8f8f8;
+    margin-left: 13px;
+    margin-top: 17px;
+}
+
+.orange-member1{
+    font-size: 15px;
+    font-weight: bolder;
+    color: #ff6001;
+    line-height: 59px;
+    word-spacing: -2px;
+}
+
+.orange-member2{
+    margin-left: 217px;
+    margin-top: 14px;
+    color: #ff6001;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.orange-member3{
+    margin-left: 3px;
+    margin-top: 14px;
+    color: #ff6001;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: #f8f8f8;
+    width: 500px;
+    height: 2px;
+    margin-top: 357px;
+    margin-left: -500px;
+}
+
+.item-info{
+    margin-left: -492px;
+    margin-top: 409px;
+    color: #999;
+    font-weight: 500;
+}
+
+.badge1{
+    width: 79px;
+    height: 32px;
+    background-position: -562% -20%;
+    margin-left: 85px;
+    margin-top: -31px;
+    background-image: url(https://www.rankingdak.com/resources/pc/images/txt/txt_badge_dlv.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
