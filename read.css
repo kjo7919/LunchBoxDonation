@@ -53,6 +53,19 @@
 }
 
 
+.hamburger{
+    background-image: url(https://www.rankingdak.com/resources/pc/images/icon/ico_gnb_all.png);
+    width: 38px;
+    height: 12px;
+    margin-left: -30px;
+    margin-top: 4px;
+}
+
+.category{
+    margin-top: -17px
+}
+
+
 .category-container {
     position: relative;
     width: 100px;
@@ -796,6 +809,28 @@ ol, ul {
 /* header */
 
 
+
+#items{
+    height: 60px;
+    width: 500px;
+    border-radius: 5px;
+    border: 1.6px solid grey;
+}
+
+
+#items option {
+  white-space: pre-wrap;
+  word-break: break-all;
+  width: 100px;
+    height: 100px;
+}
+option{
+    /* background-color: red; */
+    width: 100px;
+    height: 100px;
+}
+
+
 .item-total{
     text-align: left;
     display: flex;
@@ -948,6 +983,127 @@ ol, ul {
     background-image: url(https://www.rankingdak.com/resources/pc/images/txt/txt_badge_dlv.png);
 }
 
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    /* 원하는 크기로 조정하세요 */
+  }
+
+  input[type="radio"]:checked {
+      accent-color: rgb(255, 123, 0);
+      /* 원하는 색상으로 변경하세요 */
+    }
+
+
+.line2{
+    background-color: #f8f8f8;
+    width: 500px;
+    height: 2px;
+    margin-top: 49px;
+    margin-left: 9px;
+}
+
+.big-price{
+    margin-top: 20px;
+}
+
+.purchase-img{
+    border: 1px solid gray;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-image: url(/mainPage/assets/img/ico-gift-like.png);
+    background-position: 44% 46%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.purchase1{
+    margin-left: 10px;
+    border: 1px solid gray;
+    width: 230px;
+    height: 50px;
+    text-align: center;
+    line-height: 3;
+    color: gray;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+    word-spacing: 10px;
+    cursor: pointer;
+}
+
+.purchase2{
+    margin-left: 10px;
+    border: 1px solid gray;
+    width: 230px;
+    height: 50px;
+    text-align: center;
+    line-height: 3;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+    word-spacing: 10px;
+    cursor: pointer;
+}
+
+
+.review-intro{
+    margin-bottom: 26px;
+    margin-top: 148px;
+    margin-left: -590px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+}
+
+.review{
+    margin-left: -601px;
+}
+
+.review > div{
+    background-color: #f8f8f8;
+    width: 300px;
+    margin-left: 0px;
+    height: 190px;
+}
+
+.review > div > div{
+    margin-left: 20px;
+}
+
+.review-star{
+    background-image: url(https://www.rankingdak.com/resources/pc/images/icon/ico_rating.png);
+    width: 35%;
+    height: 23px;
+    margin-top: 23px;
+    overflow: hidden;
+    background-position: 0% 47%;
+}
+
+.review-img{
+    background-image: url(/mainPage/assets/img/review1.jpeg);
+    width: 68px;
+    height: 92px;
+    background-size: 68px;
+}
+
+.review-name{
+}
+
+.review-date{
+
+}
+
+.review-imotion{
+    color: #ff6001;
+}
+
+.review-content{
+    color: black;
+}
 
 
 

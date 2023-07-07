@@ -200,6 +200,9 @@
         <nav id="gnb" class="gnb">
             <ul>
                 <div class="category-container">
+
+                    <div class="hamburger"></div>
+
                     <div  class="category" onmouseover="showItems()" >카테고리</div>
                     <div class="items-container" id="itemsContainer" onmouseover="showItems()" onmouseout="hideItems()">
                     <div class="ttt">
@@ -295,7 +298,9 @@
     <div>브랜드관ㅤㅤ<span>맛있닭</span></div><br>
     <div>상품구성ㅤㅤ혼합 10팩 : 오리지널2, 호박2, 고추2, 갈릭2, 야채2</div><br>
     <select id="items">
-      <option value="">상품옵션선택</option>
+
+      <option value="">ㅤㅤ상품옵션선택</option>
+
       <option value="item1">오리지널 100g X 10팩<br>17,900원(1팩당 1,790원)</option>
       <option value="item2">오리지널 100g X 30팩<br>(+34,000원)</option>
       <option value="item3">오리지널 100g X 50팩<br>(+68,600원)</option>
@@ -305,12 +310,86 @@
       <option value="item7">호박맛 100g X 50팩(+69,600원)</option>
       <option value="item8">호박맛 100g X 100팩(+153,100원)</option>
     </select>
+
+
+    <ul>
+        <li>
+            <div>
+                <input type="radio" style="margin-left: -20px;" checked>
+                <span style="margin-left: 10px;">일반회원가</span>
+                <span style="margin-left: 270px; font-size: 25px; 
+                color: black; font-weight: bolder;">17,900원</span>
+            </div>
+        </li>
+        <li>
+            <div>
+                <input type="radio" style="margin-left: -20px;">
+                <span style="margin-left: 10px;">기부 구독하기</span>
+                <span style="margin-left: 252px; font-size: 25px; 
+                color: black; font-weight: bolder;">17,550원</span>
+            </div>
+        </li>
+    </ul>
+
+    <div class="line2"></div>
+
+    <div style="display: flex;" class="big-price">
+        <div class="purchase-img"></div>
+        <div class="purchase1">장바구니</div>
+        <div class="purchase2" style="background-color: rgb(255, 123, 0);">바로구매</div>
+    </div>
+
+    <div class="review-intro">베스트 구매후기<span style="font-size: 12px;"> (3,778)</span></div>
+
+<div class="review" style="display: flex;">
+    <div class="review-block">
+        <div class="review-star" style="width: 100px;"></div>
+        <div class="review-img" style="width: 65px; margin-left: 155px;"></div>
+        <div style="display: flex; margin-left: 20px; margin-top: -87px;">
+            <div class="review-name" style="font-size: 10px;">랭킹닭체고!</div> <!-- 후기 닉네임 -->
+            <div class="review-date" style="margin-left: -53px; margin-top: 17px;">2023.07.06</div> <!-- 후기 작성 날짜 -->
+            <div class="review-imotion" style="margin-left: -67px; margin-top: 95px;">BEST <span class="review-content">sdad</span></div>  <!-- 후기 내용 -->
+        </div>
+    </div>
+    <div class="review-block">
+        <div class="review-star" style="width: 100px;"></div>
+        <div class="review-img" style="width: 65px; margin-left: 155px;"></div>
+        <div style="display: flex; margin-left: 20px; margin-top: -87px;">
+            <div class="review-name" style="font-size: 10px;">랭킹닭체고!</div> <!-- 후기 닉네임 -->
+            <div class="review-date" style="margin-left: -53px; margin-top: 17px;">2023.07.06</div> <!-- 후기 작성 날짜 -->
+            <div class="review-imotion" style="margin-left: -67px; margin-top: 95px;">BEST <span class="review-content">sdad</span></div>  <!-- 후기 내용 -->
+        </div>
+    </div>
+    <div class="review-block">
+        <div class="review-star" style="width: 100px;"></div>
+        <div class="review-img" style="width: 65px; margin-left: 155px;"></div>
+        <div style="display: flex; margin-left: 20px; margin-top: -87px;">
+            <div class="review-name" style="font-size: 10px;">랭킹닭체고!</div> <!-- 후기 닉네임 -->
+            <div class="review-date" style="margin-left: -53px; margin-top: 17px;">2023.07.06</div> <!-- 후기 작성 날짜 -->
+            <div class="review-imotion" style="margin-left: -67px; margin-top: 95px;">BEST <span class="review-content">sdad</span></div>  <!-- 후기 내용 -->
+        </div>
+    </div>
+    <div class="review-block">
+        <div class="review-star" style="width: 100px;"></div>
+        <div class="review-img" style="width: 65px; margin-left: 155px;"></div>
+        <div style="display: flex; margin-left: 20px; margin-top: -87px;">
+            <div class="review-name" style="font-size: 10px;">랭킹닭체고!</div> <!-- 후기 닉네임 -->
+            <div class="review-date" style="margin-left: -53px; margin-top: 17px;">2023.07.06</div> <!-- 후기 작성 날짜 -->
+            <div class="review-imotion" style="margin-left: -67px; margin-top: 95px;">BEST <span class="review-content">sdad</span></div>  <!-- 후기 내용 -->
+        </div>
+    </div>
+
+</div>
+
+</div>
+
     <style>
         #items option {
           white-space: pre-wrap;
         }
       </style>
 </div>
+
 
 
 
@@ -347,7 +426,9 @@
 
 
 <!-- header footer 빈 공간 -->
-<div style="height: 1000px; background-color: white;"></div>
+
+<div style="height: 200px; background-color: white;"></div>
+
 <!-- header footer 빈 공간 -->
 
 
@@ -427,4 +508,26 @@
         </ul>
     </div>
     </footer>
+
 <!-- footer -->
+<script>
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        radioButtons.forEach(btn => {
+          if (btn !== button) {
+            btn.checked = false;
+          }
+        });
+      });
+    });
+
+        /* 누르면 맨위로 올라가는 JS */
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+  </script>
+
