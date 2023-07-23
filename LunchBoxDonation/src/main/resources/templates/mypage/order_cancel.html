@@ -1,13 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko" xml:lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../../static/css/myPage/mypage.css">
+
+  <link rel="stylesheet" href="/static/css/myPage/css/common.css">
+  <link rel="stylesheet" href="/static/css/myPage/css/content.css">
+  <link rel="stylesheet" href="/static/css/myPage/css/regular.css">
+
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="../../static/js/header-footer/header-footer.js"></script>
+  <script src="../header-footer/header-footer.js"></script>
+  <title>Document</title>
 </head>
 <body>
 <section id="contents" class="container">
@@ -105,51 +110,94 @@
               text1:'"여기는 뭐가 맛있어?"',
               text2:'환영해요! 닭가슴살의 세계에 이제 막 입문했네요!',
               text3:'내 입맛에 딱 맞는 닭가슴살 찾고 있다면, 홈화면의 [1팩 담기]에서 여러 상품을 한 팩 씩 골라보세요! ',
-              tag: '#special-div1'
+              tag: '',
+              type: '01'
             },
             '02':{
               img:'/resources/pc/images/img/usertag-smart.jpg',
               text1:'"어? 이거 맛있을까?"',
               text2:'이 구역의 맛잘알! 하지만 그냥 사진 않죠. 할인 혜택과 후기까지 꼼꼼히 살피고 신중하게 구매해요. ',
               text3:'홈화면에서 [이달의 특가]를 확인하세요! 매달 새로운 맛과 혜택으로 찾아갑니다!',
-              tag: '#special-div5'
+              tag: '',
+              type: '02'
             },
             '03':{
               img:'/resources/pc/images/img/usertag-maint.jpg',
               text1:'"다이어트는 꾸준히 해야죠~"',
               text2:'타이트하기 보단 꾸준히 실천할 수 있는 식단을 선호해요. 맛있으면서도 단백질, 당류 등 성분은 꼭 체크하는 진짜 다이어터! ',
               text3:'맛도 성분도 한 번에 비교하려면 최근 본 상품에서 [비교담기] 서비스를 이용해보세요!',
-              tag: '#special-div2'
+              tag: '',
+              type: '03'
             },
             '04':{
               img:'/resources/pc/images/img/usertag-mania.jpg',
               text1:'"먹다보면 다~ 맛있어"',
               text2:'다이어트에서 효율을 아주 중시해요. 때로 지겹더라도 끈기있는 실천이 다이어트의 지름길이라고 생각해요.',
               text3:'[오렌지멤버스]에 가입하고, 살 때마다 추가할인&적립 받아요!',
-              tag: '#special-div4'
+              tag: '',
+              type: '04'
             },
             '05':{
               img:'/resources/pc/images/img/usertag-frenz.jpg',
               text1:'"저는 그냥 랭닭에서 사요"',
               text2:'식단은 이미 일상이에요. 오랜 경험으로 믿고 먹는, 믿고 추천하는 제품들이 있어요.',
               text3:'꾸준히 먹는 제품은 [정기구매] 서비스를 통해서 추가할인 받아보세요!',
-              tag: '#special-div3'
+              tag: '',
+              type: '05'
             },
             '06':{
               img:'/resources/pc/images/img/usertag-standard.jpg',
               text1:'"저는 그냥 정석대로 먹는 편?"',
               text2:'대회, 바디프로필 등 명확한 목표를 갖고 식단을 하고 있어요. 건강기능식품부터 다이어트 간식까지 다이어트 제품에 대해서는 빠삭해요!',
               text3:'식단은 하루라도 놓칠 수 없어! [특급배송]으로 빠르게 받아 완벽한 식단 텐션을 유지하세요!',
-              tag: '#special-div6'
+              tag: '',
+              type: '06'
             },
             '07':{
               img:'/resources/pc/images/img/usertag-simpler.jpg',
               text1:'"밥보다 시간!"',
               text2:'혹시 도시락 찾으러 오셨어요? 편하고 빠른 식사를 선호해요.',
               text3:'홈화면 [랭킹]메뉴의 [별별랭킹] 카테고리에서 상황에 맞는 다양한 꿀조합을 소개 받아요!',
-              tag: '#special-div7'
+              tag: '',
+              type: '07'
             },
           };
+
+          let userTagExhibitionList = '[{v_exhibition_cd=EX202306230000000247, n_sort=7, v_exhibition_nm=간편식 러버, v_ex_name=07, n_num=1}, {v_exhibition_cd=EX202306230000000245, n_sort=6, v_exhibition_nm=스마트 다이어터, v_ex_name=02, n_num=2}, {v_exhibition_cd=EX202306220000000241, n_sort=5, v_exhibition_nm=닭가슴살 뉴비, v_ex_name=01, n_num=3}, {v_exhibition_cd=EX202306230000000242, n_sort=4, v_exhibition_nm=랭닭 프렌즈, v_ex_name=05, n_num=4}, {v_exhibition_cd=EX202306230000000243, n_sort=3, v_exhibition_nm=유지어터, v_ex_name=03, n_num=5}, {v_exhibition_cd=EX202306230000000244, n_sort=2, v_exhibition_nm=헬스 매니아, v_ex_name=04, n_num=6}, {v_exhibition_cd=EX202306230000000246, n_sort=1, v_exhibition_nm=다이어트의 정석, v_ex_name=06, n_num=7}]';
+          if(isEmpty(userTagExhibitionList) == false){
+            for (const key in resultObj) {
+
+              if ("07" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+1;
+              }
+
+              if ("02" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+2;
+              }
+
+              if ("01" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+3;
+              }
+
+              if ("05" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+4;
+              }
+
+              if ("03" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+5;
+              }
+
+              if ("04" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+6;
+              }
+
+              if ("06" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+7;
+              }
+
+            }
+          }
+
           let userTag = '';
           if(isEmpty(userTag) == false){
             let userTagType = '';
@@ -272,9 +320,9 @@
               <li>
                 <a href="/mypage/orderlist" class="menu">주문관리</a>
                 <ul class="depth2">
-                  <li class="current"><a href="/mypage/orderlist">주문내역</a></li>
+                  <li><a href="/mypage/orderlist">주문내역</a></li>
                   <li class=""><a href="/mypage/oldOrderlist">이전 주문내역<span class="sub">(22.04.24 이전)</span></a></li>
-                  <li><a href="/mypage/cancellist">취소/반품 내역</a></li>
+                  <li class="current"><a href="/mypage/cancellist">취소/반품 내역</a></li>
                   <li class=""><a href="/mypage/routineDelivery">정기배송 관리</a></li>
                   <li class=""><a href="/mypage/restock/list">재입고 알림 상품</a></li>
                 </ul>
@@ -364,36 +412,40 @@
           });
         }
       </script>
-      <link rel="stylesheet" type="text/css" href="/resources/pc/css/jquery-ui-1.9.2.custom.css?ver=20230406">
-      <script src="/resources/common/js/lib/jquery-ui.min.js?ver=20220808"></script>
+      <link rel="stylesheet" type="text/css" href="/static/css/myPage/css/jquery-ui-1.9.2.custom.css">
+      <script src="/static/js/myPage/lib/jquery-ui.min.js"></script>
 
       <div class="frame-right order-list-wrap">
         <div class="frame-cnt-inner">
-          <form id="myPageOrderList" name="myPageOrderList" action="/mypage/orderlist" method="get"><div class="menu-title-area">
-            <h3 class="title-menu">주문내역</h3>
+
+          <form id="myPageOrderList" name="myPageOrderList" action="/mypage/cancellist" method="get"><div class="menu-title-area">
+            <h3 class="title-menu">취소/반품내역</h3>
+
           </div><!--// menu-title-area -->
 
             <input type="hidden" name="srchFlag" value="Y">
             <input type="hidden" name="nowPageNo" value="">
+
             <div class="search-box">
               <input type="radio" id="mypage-order-search-radio-period" class="date-setting" name="mypage-order-search-radio" value="PERIOD" checked="" style="display:none;">
-              <input type="hidden" id="mypage-order-search-period" name="periodOption" value="PERIOD">
-              <input type="hidden" id="mypage-order-search-start-date" name="dStartDtm" value="2023-06-15">
-              <input type="hidden" id="mypage-order-search-end-date" name="dEndDtm" value="2023-07-15">
+              <input type="hidden" id="mypage-order-search-period" name="periodOption" value="1MONTH">
+              <input type="hidden" id="mypage-order-search-start-date" name="dStartDtm" value="2023-06-23">
+              <input type="hidden" id="mypage-order-search-end-date" name="dEndDtm" value="2023-07-23">
               <input type="hidden" id="mypage-order-search-startdate-year" data-value="2023">
-              <input type="hidden" id="mypage-order-search-startdate-month" data-value="06">
-              <input type="hidden" id="mypage-order-search-startdate-day" data-value="15">
-              <input type="hidden" id="mypage-order-search-enddate-year" data-value="2023">
-              <input type="hidden" id="mypage-order-search-enddate-month" data-value="07">
-              <input type="hidden" id="mypage-order-search-enddate-day" data-value="15">
+              <input type="hidden" id="mypage-order-search-startdate-month" data-value="03">
+              <input type="hidden" id="mypage-order-search-startdate-day" data-value="28">
+              <input type="hidden" id="mypage-order-search-enddate-year" data-value="2023" value="2023">
+              <input type="hidden" id="mypage-order-search-enddate-month" data-value="04" value="04">
+              <input type="hidden" id="mypage-order-search-enddate-day" data-value="25" value="25">
+
               <div class="search-detail">
                 <fieldset>
                   <legend>상세 검색</legend>
                   <div class="search-detail-top">
                     <div class="search-detail-date-wrapper">
-                      <input type="text" readonly="" id="searchDateFrom" class="input-text hasDatepicker" value="2023-06-15">
+                      <input readonly="" type="text" id="searchDateFrom" class="input-text hasDatepicker" value="2023-06-23">
                       ~
-                      <input type="text" readonly="" id="searchDateTo" class="input-text hasDatepicker" value="2023-07-15">
+                      <input readonly="" type="text" id="searchDateTo" class="input-text hasDatepicker" value="2023-07-23">
                     </div>
                     <div class="search-detail-date-itemname">
                       <div class="input-group w-full">
@@ -407,10 +459,10 @@
                   </div>
                   <div class="search-detail-filter">
                     <div class="search-detail-filter-btn-group">
-                      <button type="button" class="detail-filter-btn active" value="1" style="color: #000000; padding: 10px 0px 0px;" >1개월</button>
-                      <button type="button" class="detail-filter-btn" value="3" style="color: #000000; padding: 10px 0px 0px;">3개월</button>
-                      <button type="button" class="detail-filter-btn" value="6" style="color: #000000; padding: 10px 0px 0px;">6개월</button>
-                      <button type="button" class="detail-filter-btn" value="12" style="color: #000000; padding: 10px 0px 0px;">12개월</button>
+                      <button type="button" class="detail-filter-btn active" value="1">1개월</button>
+                      <button type="button" class="detail-filter-btn" value="3">3개월</button>
+                      <button type="button" class="detail-filter-btn" value="6">6개월</button>
+                      <button type="button" class="detail-filter-btn" value="12">12개월</button>
                     </div>
                     <div class="search-detail-filter-end">
                       <div class="input-group-form detail-filter-chk-group">
@@ -433,24 +485,22 @@
                   </div>
                 </fieldset>
               </div><!--// search-detail-->
-            </div><!--// search-box -->
+            </div>
           </form><div class="no-data-type1">
-          <p class="message">최근 1개월 내에 주문내역이 없습니다.</p>
+          <p class="message">최근 1개월 내에 주문내역이 없습니다.  </p>
         </div>
         </div><!--// frame-cnt-inner -->
       </div><!--// frame-right -->
 
-      <form id="command" name="deliveryPop" action="/mypage/orderlist" method="post"><input type="hidden" name="actionFlag" value="M">
+      <form id="command" name="deliveryPop" action="/mypage/cancellist" method="post"><input type="hidden" name="actionFlag" value="M">
         <input type="hidden" name="vDeliveryid">
         <input type="hidden" name="vOrderCd">
         <div>
-          <input type="hidden" name="_csrf" value="944ed213-67d0-49b6-888b-3222f3011bb5">
+          <input type="hidden" name="_csrf" value="36f9d0b2-922e-4543-8572-44d61a7d1438">
         </div></form><div class="layer-wrap" id="modal-my-delivery" style="display: none"></div>
 
 
       <!-- ======================== 해당페이지에서만 사용되는 CSS / JS ======================== -->
-      <script src="/resources/pc/js/order/cart.js"></script>
-      <script src="/resources/common/js/order/restore_cart.js"></script>
       <script>
         $(document).ready(function(){
           var fromInput = $('#searchDateFrom');
@@ -544,23 +594,17 @@
           splitCell.day.val(valSplit[2]);
           splitCell.day.attr('data-value',valSplit[2]);
         }
-        var purchaseConfirm = function (e) {
-
-
-
+        const purchaseConfirm = function (e) {
           e.preventDefault();
-          var $this = $(this);
-          var vOrderProdid = $this.data("prodid");
-          var vOrdercd = $this.data("ordercd");
+
+          let $this = $(this);
+          let vOrderProdid = $this.data("prodid");
 
           if (confirm("구매확정 하시겠습니까?")) {
             cmAjax({
               url:"/mypage/orderlist/orderConfirm",
               type: "post",
-              data: {
-                "vOrderProdid": vOrderProdid,
-                "vOrdercd": vOrdercd
-              },
+              data: {"vOrderProdid": vOrderProdid},
               success: function (res) {
                 if (res.status === "succ") {
                   location.reload();
@@ -574,7 +618,7 @@
         }
 
 
-        var memberOrderListState = {
+        const memberOrderListState = {
           startYear: '',
           startMonth: '',
           startDay: '',
@@ -583,7 +627,6 @@
           endDay: '',
           periodOption: '',
           // 숫자 전체 자리 수 중 남는 앞의 빈 숫자를 0으로 채움
-
         }
 
         function getPaddingZeroString(n, width) {
@@ -595,11 +638,11 @@
 
           memberOrderListState.startYear = '2023';
           memberOrderListState.startMonth = '06';
-          memberOrderListState.startDay = '15';
+          memberOrderListState.startDay = '23';
 
           memberOrderListState.endYear = '2023';
           memberOrderListState.endMonth = '07';
-          memberOrderListState.endDay = '15';
+          memberOrderListState.endDay = '23';
 
 
           addCheckboxEvent($('.dlvTypeAll'), $('.dlvType'));
@@ -623,21 +666,18 @@
               $('input[name=periodOption]').val(memberOrderListState.periodOption);
               $('input[name=dStartDtm]').val(memberOrderListState.startYear + '-' + memberOrderListState.startMonth + '-' + memberOrderListState.startDay);
               $('input[name=dEndDtm]').val(memberOrderListState.endYear + '-' + memberOrderListState.endMonth + '-' + memberOrderListState.endDay);
-
             } else if (  !$(this).hasClass('date-setting') ) {
-
               $("input[name='srchFlag']").val("N");
               $(this).parents('.radio-list').siblings('.ui-toggle-sub').removeClass('hide');
               $(this).parents('.radio-list').siblings('.ui-toggle-sub').find('.input-group.inline-type').hide();
               /*onSubmitMyPageOrderSearch();*/
-
             }
           });
 
           // 커스텀 셀렉트 선택시 이벤트 처리
-          var selStartYear = $('#mypage-order-search-startdate-year').find('.select-list').find('li').children('a');
+          const selStartYear = $('#mypage-order-search-startdate-year').find('.select-list').find('li').children('a');
           selStartYear.on('click', function (e) {
-            var selectData = $(this).parents('li').data('name');
+            const selectData = $(this).parents('li').data('name');
             $('#mypage-order-search-startdate-year').data('value', selectData.toString());
             console.log('startYear=', selectData.toString());
             memberOrderListState.startYear = selectData.toString();
@@ -645,9 +685,9 @@
           });
 
           // 커스텀 셀렉트 선택시 이벤트 처리
-          var selStartMonth = $('#mypage-order-search-startdate-month').find('.select-list').find('li').children('a');
+          const selStartMonth = $('#mypage-order-search-startdate-month').find('.select-list').find('li').children('a');
           selStartMonth.on('click', function (e) {
-            var selectData = $(this).parents('li').data('name');
+            const selectData = $(this).parents('li').data('name');
             $('#mypage-order-search-startdate-month').data('value', selectData.toString());
             console.log('startMonth=', selectData.toString());
             memberOrderListState.startMonth = selectData.toString();
@@ -655,9 +695,9 @@
           });
 
           // 커스텀 셀렉트 선택시 이벤트 처리
-          var selStartDay = $('#mypage-order-search-startdate-day').find('.select-list').find('li').children('a');
+          const selStartDay = $('#mypage-order-search-startdate-day').find('.select-list').find('li').children('a');
           selStartDay.on('click', function (e) {
-            var selectData = $(this).parents('li').data('name');
+            const selectData = $(this).parents('li').data('name');
             $('#mypage-order-search-startdate-day').data('value', selectData.toString());
             console.log('startDay=', selectData.toString());
             memberOrderListState.startDay = selectData.toString();
@@ -665,27 +705,27 @@
           });
 
           // 커스텀 셀렉트 선택시 이벤트 처리
-          var selEndYear = $('#mypage-order-search-enddate-year').find('.select-list').find('li').children('a');
+          const selEndYear = $('#mypage-order-search-enddate-year').find('.select-list').find('li').children('a');
           selEndYear.on('click', function (e) {
-            var selectData = $(this).parents('li').data('name');
+            const selectData = $(this).parents('li').data('name');
             $('#mypage-order-search-enddate-year').data('value', selectData.toString());
             memberOrderListState.endYear = selectData.toString();
             e.preventDefault();
           });
 
           // 커스텀 셀렉트 선택시 이벤트 처리
-          var selEndMonth = $('#mypage-order-search-enddate-month').find('.select-list').find('li').children('a');
+          const selEndMonth = $('#mypage-order-search-enddate-month').find('.select-list').find('li').children('a');
           selEndMonth.on('click', function (e) {
-            var selectData = $(this).parents('li').data('name');
+            const selectData = $(this).parents('li').data('name');
             $('#mypage-order-search-enddate-month').data('value', selectData.toString());
             memberOrderListState.endMonth = selectData.toString();
             e.preventDefault();
           });
 
           // 커스텀 셀렉트 선택시 이벤트 처리
-          var selEndDay = $('#mypage-order-search-enddate-day').find('.select-list').find('li').children('a');
+          const selEndDay = $('#mypage-order-search-enddate-day').find('.select-list').find('li').children('a');
           selEndDay.on('click', function (e) {
-            var selectData = $(this).parents('li').data('name');
+            const selectData = $(this).parents('li').data('name');
             $('#mypage-order-search-enddate-day').data('value', selectData.toString());
             memberOrderListState.endDay = selectData.toString();
             e.preventDefault();
@@ -700,12 +740,6 @@
 
           return endPointFunction();
         });
-
-        function routineCancelReq(dlvReqno){
-          if(confirm("정기배송은 정기배송관리 화면에서 관리할 수 있습니다. 이동 하시겠습니까?")){
-            location.href = "/mypage/routineDelivery/detail?vDlvReqno="+dlvReqno;
-          }
-        }
 
         function endPointFunction(){
           let srchFlag = "";
@@ -732,22 +766,22 @@
 
         function onClickMyPageOrderListOrderCd(obj) {
           console.log($(obj).attr('ordercd'));
-          document.location.href = '/mypage/orderdetail?orderCd=' + $(obj).attr('ordercd');
+          document.location.href = '/mypage/canceldetail?orderCd=' + $(obj).attr('ordercd');
         }
 
         function validateMyPageOrderListSearchPeriod() {
-          var periodOption = $('[name=mypage-order-search-radio]:checked').val();
+          const periodOption = $('[name=mypage-order-search-radio]:checked').val();
 
-          var startDate = new Date();
-          var nowDate = new Date();
+          let startDate = new Date();
+          const nowDate = new Date();
 
-          var startYear = $('#mypage-order-search-startdate-year').data('value');
-          var startMonth = $('#mypage-order-search-startdate-month').data('value');
-          var startDay = $('#mypage-order-search-startdate-day').data('value');
+          let startYear = $('#mypage-order-search-startdate-year').data('value');
+          let startMonth = $('#mypage-order-search-startdate-month').data('value');
+          let startDay = $('#mypage-order-search-startdate-day').data('value');
 
-          var endYear = $('#mypage-order-search-enddate-year').data('value');
-          var endMonth = $('#mypage-order-search-enddate-month').data('value');
-          var endDay = $('#mypage-order-search-enddate-day').data('value');
+          let endYear = $('#mypage-order-search-enddate-year').data('value');
+          let endMonth = $('#mypage-order-search-enddate-month').data('value');
+          let endDay = $('#mypage-order-search-enddate-day').data('value');
 
           switch (periodOption) {
             case '2WEEKS':
@@ -779,8 +813,8 @@
             endDay = getPaddingZeroString(nowDate.getDate(), 2);
           }
 
-          var lastStartDayOfMonth = new Date(parseInt(startYear, 10), parseInt(startMonth, 10), 0).getDate();
-          var lastEndDayOfMonth = new Date(parseInt(endYear, 10), parseInt(endMonth, 10), 0).getDate();
+          const lastStartDayOfMonth = new Date(parseInt(startYear, 10), parseInt(startMonth, 10), 0).getDate();
+          const lastEndDayOfMonth = new Date(parseInt(endYear, 10), parseInt(endMonth, 10), 0).getDate();
 
           if (lastStartDayOfMonth < parseInt(startDay, 10)) {
             alert('검색 시작 기간의 ' + startYear + '년 ' + startMonth + '월은 ' + lastStartDayOfMonth + '일 까지입니다.');
@@ -824,20 +858,19 @@
         }
 
         function onClickMyPageOrderListInitialPeriod() {
-
           var periodOption = "1MONTH";
-          var startDate = new Date();
-          var nowDate = new Date();
+          let startDate = new Date();
+          const nowDate = new Date();
 
           startDate.setMonth(nowDate.getMonth() - 1);
 
-          var startYear = startDate.getFullYear().toString(10);
-          var startMonth = getPaddingZeroString(startDate.getMonth() + 1, 2);
-          var startDay = getPaddingZeroString(startDate.getDate(), 2);
+          const startYear = startDate.getFullYear().toString(10);
+          const startMonth = getPaddingZeroString(startDate.getMonth() + 1, 2);
+          const startDay = getPaddingZeroString(startDate.getDate(), 2);
 
-          var endYear = nowDate.getFullYear().toString(10);
-          var endMonth = getPaddingZeroString(nowDate.getMonth() + 1, 2);
-          var endDay = getPaddingZeroString(nowDate.getDate(), 2);
+          const endYear = nowDate.getFullYear().toString(10);
+          const endMonth = getPaddingZeroString(nowDate.getMonth() + 1, 2);
+          const endDay = getPaddingZeroString(nowDate.getDate(), 2);
 
           memberOrderListState.startYear = startYear;
           memberOrderListState.startMonth = startMonth;
@@ -867,7 +900,6 @@
         }
 
         function onSubmitMyPageOrderSearch() {
-
           if (!validateMyPageOrderListSearchPeriod()) {
             return false;
           }
@@ -884,8 +916,8 @@
             $('#dlvRtn').val('Y');
           }
 
-          var frm = $('#myPageOrderList');
-          frm.attr('action', '/mypage/orderlist');
+          const frm = $('#myPageOrderList');
+          frm.attr('action', '/mypage/cancellist');
           frm.submit();
           return true;
         }
@@ -897,7 +929,7 @@
             return false;
           }
 
-          var frm = $("form[name='myPageOrderList']");
+          let frm = $("form[name='myPageOrderList']");
 
           if ($('#dlvTypeAll').prop("checked")) {
             $('#dlvTypeAll').val('Y');
@@ -911,7 +943,7 @@
             $('#dlvRtn').val('Y');
           }
 
-          /*var searchWord = frm.find("input[name='srchProductNm']").val();
+          /*let searchWord = frm.find("input[name='srchProductNm']").val();
           if (!searchWord) {
               alert("검색어를 입력해주세요.");
               return;
@@ -926,9 +958,9 @@
 
           var $this = $(this);
 
-          var vOrderCd = $this.data("ordercd");
+          let vOrderCd = $this.data("ordercd");
 
-          var $form = $("form[name='deliveryPop']");
+          let $form = $("form[name='deliveryPop']");
           $form.find("input[name='vOrderCd']").val(vOrderCd);
 
           $("#modal-my-delivery").load("/mypage/orderlist/shippingModifyPop", $form.serialize(), function () {
@@ -937,67 +969,15 @@
             selectBox();
           });
         }
-        function closePop() {
-          $('#modal-my-delivery').html('');
-          $("#modal-my-delivery").hide();
-        }
-
-
-        function openUserDeliveryListPop(e) {
-          vOrdercd = $(this).data("ordercd");
-          let dayDlv = $(this).data("daydlv");
-
-          $('#modal-my-delivery').load("/order/order/userDeliveryList", function () {
-            $("#modal-my-delivery").data("ordercd", vOrdercd);
-            $("#modal-my-delivery").data("daydlv", dayDlv);
-          });
-          $("#modal-my-delivery").show();
-        }
-
-        function callbackSelectAddr(obj) {
-          let daydlv = $("#modal-my-delivery").data("daydlv");
-
-          if (daydlv == 'Y' && obj.vExpressYn == 'Y' && obj.vDawnDlvYn == 'Y' && obj.vTodayDlvYn == 'N'){
-            alert("선택한 지역으로는 당일배송이 불가능합니다.");
-            return ;
-          }
-
-          var data = {
-            "vOrderCd" : $("#modal-my-delivery").data("ordercd"),
-            "vAddr" : obj["vAddr"],
-            "vAddrDtl" : obj["vAddrDtl"],
-            "vDeliveryCell" : obj["vDeliveryCell"],
-            "vDeliveryCell1" : obj["vDeliveryCell1"],
-            "vDeliveryCell2" : obj["vDeliveryCell2"],
-            "vDeliveryNm" : obj["vDeliveryNm"],
-            "vPostcd" : obj["vPostcd"]
-          }
-
-          cmAjax({
-            url: "/mypage/orderlist/shippingModifyPopSave",
-            type: "POST",
-            data: data,
-            dataType: "json",
-            success: function (res) {
-              if (res.status === "succ") {
-                alert("배송지 정보가 변경되었습니다.");
-                closePop()
-                location.reload();
-              } else {
-                alert(res.message);
-              }
-            }
-          });
-        }
 
         function openPostSearchForm(nowPageNo) {
           $("form[name='postSearchForm'] input[name=nowPageNo]").val(nowPageNo);
-          var param = $("form[name='postSearchForm']");
+          const param = $("form[name='postSearchForm']");
           $('#jusoDiv').load('/juso/getAddrApi', param.serialize());
         }
 
         function postReturn(data) {
-          var vAddr = '';
+          let vAddr = '';
           if (data.roadAddr == null) {
             vAddr = data.jibunAddr;
           } else {
@@ -1017,9 +997,9 @@
         var saveShipping = function (e) {
           e.preventDefault();
 
-          var $form = $("form[id='userDeliveryForm']");
+          let $form = $("form[id='userDeliveryForm']");
 
-          var valueByName = getValueByName($form, "vDeliveryNm");
+          let valueByName = getValueByName($form, "vDeliveryNm");
           if (valueByName === "") {
             alert("받는 분을 입력해주세요.");
             return;
@@ -1041,7 +1021,7 @@
             return;
           }
 
-          var data = $form.serialize();
+          let data = $form.serialize();
           cmAjax({
             url: "/mypage/orderlist/shippingModifyPopSave",
             type: "POST",
@@ -1055,16 +1035,15 @@
         }
 
         var getValueByName = function(form, name) {
-          var val = form.find("input[name='" + name + "']").val();
+          let val = form.find("input[name='" + name + "']").val();
           return val;
         }
 
         var cancelRequest = function (e) {
           e.preventDefault();
-          var target = e.currentTarget;
-          var dataset = target.dataset;
-          var ordercd = dataset.ordercd;
-
+          let target = e.currentTarget;
+          let dataset = target.dataset;
+          let ordercd = dataset.ordercd;
           if (ordercd) {
             if (confirm("상품 포장이 시작된 [상품 준비중] 이후 단계에서는 취소가 제한될 수 있습니다.\n"+
                     "주문 내역에서 취소 완료 여부를 꼭 확인 부탁드립니다.\n"+
@@ -1106,11 +1085,11 @@
           var productNm = $this.data("prodnm");
           var imgUrl = $this.data("imageurl");
 
-          var orderArray = [],
+          let orderArray = [],
                   order = {
-                    "v_productcd" : productCd, // option_prod_cd  if null v_productcd
+                    "v_productcd" : productCd,
                     "n_qty" : 1,
-                    "v_uproductcd" : productCd, // v_productcd
+                    "v_uproductcd" : productCd,
                     "v_gproductcd" : productCd, // productcd
                   }
 
@@ -1123,7 +1102,6 @@
           fnCartInsert("01", orderArray, function(status, cartType){
 
             if(status == 'succ'){
-
               if (confirm("장바구니에 추가하였습니다.\n장바구니로 이동하시겠습니까?")) {
                 location.href = "/order/cart";
               }
@@ -1134,32 +1112,7 @@
 
         }
 
-        var deliveryConfirmed = function (e) {
-          e.preventDefault();
-
-          var $this = $(this);
-          var vOrderProdid = $this.data("prodid");
-          var vOrdercd = $this.data("ordercd");
-
-          if (confirm("수취확인 처리 하시겠습니까?")) {
-            cmAjax({
-              url:"/mypage/orderlist/deliveryConfirm",
-              type: "post",
-              data: {"vOrderProdid": vOrderProdid,
-                "vOrdercd" : vOrdercd},
-              success: function (res) {
-                if (res.status === "succ") {
-                  location.reload();
-                }
-              },
-              error: function (err) {
-                console.log(err);
-              }
-            });
-          }
-        }
-
-        var checkNullOrEmptyValue = function (parameter) {
+        const checkNullOrEmptyValue = function (parameter) {
           if (parameter === null || parameter === '' || parameter === undefined || parameter === 'null') return false;
           return true;
         };
@@ -1169,15 +1122,6 @@
           setTimeout(function () {
             $('.toast-box-wrap').remove();
           },1000)
-        }
-
-        function fnDlvPop(ordercd, orderProdid,dawnDlvYn,dayDlvYn){
-          event.preventDefault();
-          if(dayDlvYn =='Y'){
-            alert("당일배송 상품은 배송 조회하실 수 없습니다.");
-            return false;
-          }
-          window.open("/mypage/orderdlvpop?vOrdercd="+ordercd+"&vOrderProdid="+orderProdid + "&vDawnDlvYn="+dawnDlvYn + "&vDayDlvYn=" + dayDlvYn, "popUpWin", "width=480px, height=832px, status=yes, scrollbars=no,resizable=yes, menubar=no");
         }
 
         function CustomPagingSetting( pg , size ) {
@@ -1206,19 +1150,23 @@
           frm.submit();
         }
 
+        function routineCancelReq(dlvReqno){
+          if(confirm("정기배송은 정기배송관리 화면에서 관리할 수 있습니다. 이동 하시겠습니까?")){
+            location.href = "/mypage/routineDelivery/detail?vDlvReqno="+dlvReqno;
+          }
+        }
+
         $(document).ready()
                 .on("click", ".search-word", searchProductName)
-                .on("click", ".shipping-modify-btn", openUserDeliveryListPop)
+                .on("click", ".shipping-modify-btn", shippingModifyPop)
                 .on("click", ".btn-confirmed", purchaseConfirm)
                 // .on("click", ".btn-put-back", putBack)
                 .on("click", ".btn-cancel-request", cancelRequest)
-                .on("click", ".ui-close-pop", closePop)
-                .on("click", ".btn-delivery-confirmed", deliveryConfirmed)
-
         ;
 
       </script>
-
+      <script src="/static/js/myPage/cart.js"></script>
+      <script src="/static/js/myPage/restore_cart.js"></script>
     </div><!--// frame-sm -->
   </div><!--// content-wrap -->
 

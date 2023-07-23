@@ -1,19 +1,22 @@
 <!doctype html>
 <html lang="ko" xml:lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="../../static/css/myPage/mypage.css">
+  <link rel="stylesheet" href="/static/css/myPage/css/common.css">
+  <link rel="stylesheet" href="/static/css/myPage/css/content.css">
+  <link rel="stylesheet" href="/static/css/myPage/css/regular.css">
 
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="../../static/js/header-footer/header-footer.js"></script>
-    <title>Document</title>
+  <script src="../header-footer/header-footer.js"></script>
+  <title>Document</title>
 </head>
 <body>
 <section id="contents" class="container">
+
   <div class="content-wrap">
     <div class="frame-full head-mypage">
       <h2 class="blind">마이페이지</h2>
@@ -107,51 +110,94 @@
               text1:'"여기는 뭐가 맛있어?"',
               text2:'환영해요! 닭가슴살의 세계에 이제 막 입문했네요!',
               text3:'내 입맛에 딱 맞는 닭가슴살 찾고 있다면, 홈화면의 [1팩 담기]에서 여러 상품을 한 팩 씩 골라보세요! ',
-              tag: '#special-div1'
+              tag: '',
+              type: '01'
             },
             '02':{
               img:'/resources/pc/images/img/usertag-smart.jpg',
               text1:'"어? 이거 맛있을까?"',
               text2:'이 구역의 맛잘알! 하지만 그냥 사진 않죠. 할인 혜택과 후기까지 꼼꼼히 살피고 신중하게 구매해요. ',
               text3:'홈화면에서 [이달의 특가]를 확인하세요! 매달 새로운 맛과 혜택으로 찾아갑니다!',
-              tag: '#special-div5'
+              tag: '',
+              type: '02'
             },
             '03':{
               img:'/resources/pc/images/img/usertag-maint.jpg',
               text1:'"다이어트는 꾸준히 해야죠~"',
               text2:'타이트하기 보단 꾸준히 실천할 수 있는 식단을 선호해요. 맛있으면서도 단백질, 당류 등 성분은 꼭 체크하는 진짜 다이어터! ',
               text3:'맛도 성분도 한 번에 비교하려면 최근 본 상품에서 [비교담기] 서비스를 이용해보세요!',
-              tag: '#special-div2'
+              tag: '',
+              type: '03'
             },
             '04':{
               img:'/resources/pc/images/img/usertag-mania.jpg',
               text1:'"먹다보면 다~ 맛있어"',
               text2:'다이어트에서 효율을 아주 중시해요. 때로 지겹더라도 끈기있는 실천이 다이어트의 지름길이라고 생각해요.',
               text3:'[오렌지멤버스]에 가입하고, 살 때마다 추가할인&적립 받아요!',
-              tag: '#special-div4'
+              tag: '',
+              type: '04'
             },
             '05':{
               img:'/resources/pc/images/img/usertag-frenz.jpg',
               text1:'"저는 그냥 랭닭에서 사요"',
               text2:'식단은 이미 일상이에요. 오랜 경험으로 믿고 먹는, 믿고 추천하는 제품들이 있어요.',
               text3:'꾸준히 먹는 제품은 [정기구매] 서비스를 통해서 추가할인 받아보세요!',
-              tag: '#special-div3'
+              tag: '',
+              type: '05'
             },
             '06':{
               img:'/resources/pc/images/img/usertag-standard.jpg',
               text1:'"저는 그냥 정석대로 먹는 편?"',
               text2:'대회, 바디프로필 등 명확한 목표를 갖고 식단을 하고 있어요. 건강기능식품부터 다이어트 간식까지 다이어트 제품에 대해서는 빠삭해요!',
               text3:'식단은 하루라도 놓칠 수 없어! [특급배송]으로 빠르게 받아 완벽한 식단 텐션을 유지하세요!',
-              tag: '#special-div6'
+              tag: '',
+              type: '06'
             },
             '07':{
               img:'/resources/pc/images/img/usertag-simpler.jpg',
               text1:'"밥보다 시간!"',
               text2:'혹시 도시락 찾으러 오셨어요? 편하고 빠른 식사를 선호해요.',
               text3:'홈화면 [랭킹]메뉴의 [별별랭킹] 카테고리에서 상황에 맞는 다양한 꿀조합을 소개 받아요!',
-              tag: '#special-div7'
+              tag: '',
+              type: '07'
             },
           };
+
+          let userTagExhibitionList = '[{v_exhibition_cd=EX202306230000000247, n_sort=7, v_exhibition_nm=간편식 러버, v_ex_name=07, n_num=1}, {v_exhibition_cd=EX202306230000000245, n_sort=6, v_exhibition_nm=스마트 다이어터, v_ex_name=02, n_num=2}, {v_exhibition_cd=EX202306220000000241, n_sort=5, v_exhibition_nm=닭가슴살 뉴비, v_ex_name=01, n_num=3}, {v_exhibition_cd=EX202306230000000242, n_sort=4, v_exhibition_nm=랭닭 프렌즈, v_ex_name=05, n_num=4}, {v_exhibition_cd=EX202306230000000243, n_sort=3, v_exhibition_nm=유지어터, v_ex_name=03, n_num=5}, {v_exhibition_cd=EX202306230000000244, n_sort=2, v_exhibition_nm=헬스 매니아, v_ex_name=04, n_num=6}, {v_exhibition_cd=EX202306230000000246, n_sort=1, v_exhibition_nm=다이어트의 정석, v_ex_name=06, n_num=7}]';
+          if(isEmpty(userTagExhibitionList) == false){
+            for (const key in resultObj) {
+
+              if ("07" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+1;
+              }
+
+              if ("02" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+2;
+              }
+
+              if ("01" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+3;
+              }
+
+              if ("05" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+4;
+              }
+
+              if ("03" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+5;
+              }
+
+              if ("04" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+6;
+              }
+
+              if ("06" === resultObj[key].type) {
+                resultObj[key]['tag'] = "#special-div"+7;
+              }
+
+            }
+          }
+
           let userTag = '';
           if(isEmpty(userTag) == false){
             let userTagType = '';
@@ -464,11 +510,11 @@
           </div>
         </div><!--// frame-cnt-inner -->
       </div><!--// content-wrap -->
-      <form id="command" name="deliveryPop" action="/mypage/main?imageUrl=https%3A%2F%2Ffile.rankingdak.com" method="post"><input type="hidden" name="actionFlag" value="M">
+      <form id="command" name="deliveryPop" action="/mypage/main" method="post"><input type="hidden" name="actionFlag" value="M">
         <input type="hidden" name="vDeliveryid">
         <input type="hidden" name="vOrderCd">
         <div>
-          <input type="hidden" name="_csrf" value="944ed213-67d0-49b6-888b-3222f3011bb5">
+          <input type="hidden" name="_csrf" value="cbe10549-11c2-4091-994d-0c82c6378385">
         </div></form><div class="layer-wrap" id="modal-my-delivery" style="display: none"></div>
       <script type="text/javascript">
         $('.member-ext').on('click',function(){
@@ -785,8 +831,8 @@
           }
         }
       </script>
-      <script src="/resources/pc/js/order/cart.js"></script>
-      <script src="/resources/common/js/order/restore_cart.js"></script>
+      <script src="/static/js/myPage/cart.js"></script>
+      <script src="/static/js/myPage/restore_cart.js"></script>
     </div><!--// frame-sm -->
   </div><!--// content-wrap -->
 

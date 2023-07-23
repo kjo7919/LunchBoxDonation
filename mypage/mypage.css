@@ -112,7 +112,7 @@ h2 {
     display: inline-block;
     width: 60px;
     height: 62px;
-    background: url('/mypage/images/ico_cou_level.png') 0 0;
+    background: url('/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico_cou_level.png') 0 0;
 }
 .user-info-box .inner > .column {
     display: table-cell;
@@ -813,7 +813,7 @@ a{background:transparent; text-decoration:none; color:inherit;}
     margin: -3px 6px 0 3px
 }
 .ico-bl-cs{background-position:-60px -110px; width:20px; height:20px;}
-[class^="ico-bl-"]{display:inline-block; background-image:url("/mypage/images/ico_bullet.png");}
+[class^="ico-bl-"]{display:inline-block; background-image:url("/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico_bullet.png");}
 
 /* span 실시간 채팅 상담 */
 .box-grey-type1 .tit-box i + span {
@@ -887,7 +887,7 @@ address, caption, strong[lang=en], em, cite, b {font-weight:normal; font-style:n
 
 /* command actionFlag */
 label, select, input, textarea {vertical-align:middle; }
-[class^="ico-bl-"]{display:inline-block; background-image:url("/mypage/images/ico_bullet.png");}
+[class^="ico-bl-"]{display:inline-block; background-image:url("/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico_bullet.png");}
 
 
 /* 사용자 에이전트 스타일시트 */
@@ -1160,7 +1160,7 @@ html,body{height:100%; color:#333; font-size:14px; font-weight:400; /*line-heigh
     height: 42px;
     border-radius: 4px;
     border: 1px solid #e6e6e6;
-    background-image: url('/mypage/images/ico-data-calendar.png');
+    background-image: url('/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico-data-calendar.png');
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: calc(100% - 15px) center;
@@ -1208,13 +1208,13 @@ label, select, input, textarea {vertical-align:middle; }
 }
 [class*="btn-icon-"]{display:inline-block;}
 .input-group > .input-group-btn{display:table-cell; position:relative; white-space:nowrap; width:1%; vertical-align:middle; border:0; padding:0 5px;}
-[class*="btn-icon-"]:after{display:inline-block; content:''; background-image:url("/mypage/images/ico_btns.png");}
+[class*="btn-icon-"]:after{display:inline-block; content:''; background-image:url("/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico_btns.png");}
 
 /* 체크 창 */
-.custom-checkbox .checkbox.type-dark:checked + label:before{background:#333 url("/mypage/images/ico_form.png?ver=20220511") -50px -30px; width:18px; height:18px; border:1px solid #333;}
+.custom-checkbox .checkbox.type-dark:checked + label:before{background:#333 url("/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico_form.png?ver=20220511") -50px -30px; width:18px; height:18px; border:1px solid #333;}
 .custom-checkbox .checkbox.type-dark + label{padding-left:26px; min-height:18px;}
 .custom-checkbox .checkbox.type-dark + label:before{display:block; content:''; position:absolute; left:0; top:0; width:18px; height:18px; text-align:center; background:#fff; border:1px solid #e6e6e6;box-sizing:border-box; border-radius:3px;}
-.custom-checkbox .checkbox:checked + label:before{background:#FF6001 url("/mypage/images/ico_form.png?ver=20230417") -50px -30px; width:18px; height:18px; border:1px solid #FF6001;}
+.custom-checkbox .checkbox:checked + label:before{background:#FF6001 url("/LunchBoxDonation/src/main/resources/static/css/myPage/images/ico_form.png?ver=20230417") -50px -30px; width:18px; height:18px; border:1px solid #FF6001;}
 .custom-checkbox .checkbox + label:before{display:block; content:''; position:absolute; left:0; top:0; width:18px; height:18px; text-align:center; background:#fff; border:1px solid #ccc;box-sizing:border-box;}
 .custom-checkbox input[type="checkbox"] + label{display:inline-block; position:relative; cursor:pointer; vertical-align: top;}/* 20211118 장바구니 선택삭제 버튼과 달라보임. line-height: 1.4; */
 .custom-checkbox .checkbox + label{padding-left:26px; min-height:18px;}
