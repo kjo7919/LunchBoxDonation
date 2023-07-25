@@ -14,7 +14,9 @@ spring:
     driver-class-name: oracle.jdbc.OracleDriver
     url: jdbc:oracle:thin:@localhost:1521:XE
     username: hr
-    password: hr  web:
+    password: hr
+
+  web:
     resources:
       static-locations: classpath:/static/
 
