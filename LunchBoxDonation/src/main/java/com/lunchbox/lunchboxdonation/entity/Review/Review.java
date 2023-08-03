@@ -15,6 +15,7 @@ public class Review {
     @GeneratedValue
     private Long id;
 
+    @Column(nullable = false)
     private String reviewContent;
 
     //    멤버 연관 관계

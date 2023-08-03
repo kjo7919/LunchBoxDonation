@@ -21,29 +21,29 @@ import java.util.List;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long order_id;
+    private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime order_date;
-    private int order_price;
-    private int order_quantity;
+    private LocalDateTime orderDate;
+    private int orderPrice;
+    private int orderQuantity;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "LUNCHBOX_NUM")
+    @JoinColumn(name = "LUNCHBOX_ID")
     private Lunchbox lunchbox;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<OrderItems> orderItems = new ArrayList<>();
+    private List<OrderAddress> orderAddresses = new ArrayList<>();
 
     @Builder
     public Order(OrderDTO orderDTO){
-        this.order_price = orderDTO.getOrder_price();
-        this.order_quantity = orderDTO.getOrder_quantity();
-        this.order_date = orderDTO.getOrder_date();
+        this.orderPrice = orderDTO.getOrderPrice();
+        this.orderQuantity = orderDTO.getOrderQuantity();
+        this.orderDate = orderDTO.getOrderDate();
     }
 
     public static Order of(OrderDTO orderDTO){
