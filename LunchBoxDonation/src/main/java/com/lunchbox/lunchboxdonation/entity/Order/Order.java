@@ -2,7 +2,7 @@ package com.lunchbox.lunchboxdonation.entity.Order;
 
 import com.lunchbox.lunchboxdonation.domain.Order.OrderDTO;
 import com.lunchbox.lunchboxdonation.entity.Lunchbox.Lunchbox;
-import com.lunchbox.lunchboxdonation.entity.Member;
+import com.lunchbox.lunchboxdonation.entity.member.Member;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

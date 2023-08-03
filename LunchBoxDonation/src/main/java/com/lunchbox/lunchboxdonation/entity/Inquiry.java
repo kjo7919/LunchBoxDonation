@@ -1,16 +1,15 @@
 package com.lunchbox.lunchboxdonation.entity;
 
+import com.lunchbox.lunchboxdonation.entity.member.Member;
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Getter @Setter @ToString
+@NoArgsConstructor
 @Table(name="TBL_INQUIRY")
 public class Inquiry {
 
@@ -22,11 +21,12 @@ public class Inquiry {
     @JoinColumn(name = "MEMBER_ID", nullable = false)
     private Member member;
 
-    @NotNull private String title;
-    @NotNull private String content;
+    @Column(nullable = false)
+    private String title;
+    private String content;
     private String answer;
     private Date answerDate;
-    @NotNull private Date regDate;
+    private Date regDate;
     private Date modDate;
 
     @Builder

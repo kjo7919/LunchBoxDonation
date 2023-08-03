@@ -1,4 +1,4 @@
-package com.lunchbox.lunchboxdonation.entity;
+package com.lunchbox.lunchboxdonation.entity.member;
 
 import lombok.*;
 

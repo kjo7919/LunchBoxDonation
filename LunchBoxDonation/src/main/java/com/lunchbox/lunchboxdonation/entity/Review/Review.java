@@ -1,7 +1,7 @@
 package com.lunchbox.lunchboxdonation.entity.Review;
 
 import com.lunchbox.lunchboxdonation.entity.Lunchbox.Lunchbox;
-import com.lunchbox.lunchboxdonation.entity.Member;
+import com.lunchbox.lunchboxdonation.entity.member.Member;
 import lombok.*;
 
 import javax.persistence.*;
