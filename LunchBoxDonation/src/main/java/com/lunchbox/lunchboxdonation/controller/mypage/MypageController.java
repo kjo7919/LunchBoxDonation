@@ -1,21 +1,32 @@
 package com.lunchbox.lunchboxdonation.controller.mypage;
 
+import com.lunchbox.lunchboxdonation.entity.Order.OrderAddress;
+import com.lunchbox.lunchboxdonation.service.MypageService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+
+
 
 @Controller
 @Slf4j
+@RequiredArgsConstructor
 public class MypageController {
 
-    @RequestMapping("mypage")
-    public ModelAndView mypage(){
-        ModelAndView mv = new ModelAndView();
+    private final MypageService mypageService;
 
-        mv.setViewName("mypage/mypage"); // html 파일 경로
-        log.info(String.valueOf(mv));
-        return mv;
+
+
+    @RequestMapping("/mypages")
+    public String mypage(Model model){
+        Page<OrderAddress> recentOrderAddressesPage = mypageService.getRecentOrderAddressesWithinThreeMonthsPageable(0, 3);
+        model.addAttribute("recentOrderAddresses",recentOrderAddressesPage);
+        return "mypage/mypage";
     }
+
+
 
 }
