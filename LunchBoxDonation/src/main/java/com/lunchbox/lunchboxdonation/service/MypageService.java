@@ -1,8 +1,9 @@
 package com.lunchbox.lunchboxdonation.service;
 
+import com.lunchbox.lunchboxdonation.entity.Likes;
 import com.lunchbox.lunchboxdonation.entity.Order.OrderAddress;
-import com.lunchbox.lunchboxdonation.repository.LikesRepository;
-import com.lunchbox.lunchboxdonation.repository.OrderAddressRepository;
+import com.lunchbox.lunchboxdonation.entity.Review.Review;
+import com.lunchbox.lunchboxdonation.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @Slf4j
@@ -20,7 +22,8 @@ import java.time.LocalDateTime;
 public class MypageService {
     
     private final OrderAddressRepository orderAddressRepository;
-//    private final LikesRepository likesRepository;
+    private final LikesRepository likesRepository;
+    private final ReviewRepository reviewRepository;
 
 
 //  주문내역
@@ -31,12 +34,24 @@ public class MypageService {
     }
 
 
-//  찜하기
-//    public Page<LikesItem> getLikedLunchboxesPageable(Member dummyMember, int pageNumber, int pageSize) {
-//        Pageable pageable = PageRequest.of(pageNumber, pageSize);
-//        return likesRepository.findByMember(dummyMember,pageable);
+//  찜하기 내역
+    public List<Likes> getAllLikes(){
+        return likesRepository.findAllLikes();
+    }
+
+
+//  리뷰 내역
+    public List<Review> getAllReview(){
+        return reviewRepository.findAllReviews();
+    }
+
+
+////  1:1 문의 내역
+//    public List<Inquiry> getAllInquiriesForMember(Member member) {
+//        List<Member> members = memberRepository.getMemberById(member.getId());
+//        if(members.isEmpty()){
+//            throw new CustomException(Error.NOT_FOUND_POST);
+//        }
+//        return inquiryRepository.findAllByMember(member);
 //    }
-
-
-
 }

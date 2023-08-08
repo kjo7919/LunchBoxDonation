@@ -462,8 +462,13 @@
                 <a href="/mypage/wish/list" class="btn-link-txt2"><span>전체보기</span><i class="ico-arr-right"></i></a>
               </div><!--// list-title-area -->
               <div class="order-list-area">
-                <div class="no-data-type3">
+                <div th:if="${likesList.isEmpty()}" class="no-data-type3">
                   <p class="message">찜한 상품이 없습니다. </p>
+                </div>
+                <div th:unless="${likesList.isEmpty()}">
+                  <ul>
+                    <li th:each="like : ${likesList}"></li>
+                  </ul>
                 </div>
               </div><!--// order-list-area -->
             </div><!--// colum -->
@@ -475,8 +480,17 @@
               </div><!--// list-title-area -->
               <div class="order-list-area">
                 <!-- [Dev] 20210909 추가 : 상품후기 없을 경우 -->
-                <div class="no-data-type4">
+                <div th:if="${reviews.empty}" class="no-data-type4">
                   <p class="message">작성 가능한 후기가 없습니다.</p>
+                </div>
+                <div th:unless="${reviews.empty}">
+                  <ul>
+                    <li th:each="review : ${reviews}">
+                      <p th:text="${review.reviewContent}"></p>
+                      <p>작성자 : <span th:text="${review.member.name}"></span></p>
+                      <p>상품명 : <span th:text="${review.lunchbox.name}"></span></p>
+                    </li>
+                  </ul>
                 </div>
               </div><!--// order-list-area -->
             </div><!--// colum -->
