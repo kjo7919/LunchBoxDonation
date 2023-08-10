@@ -1,18 +1,20 @@
-package com.lunchbox.lunchboxdonation.entity.coupon;
+package com.lunchbox.lunchboxdonation.entity;
 
+import com.lunchbox.lunchboxdonation.entity.Order.Order;
 import com.lunchbox.lunchboxdonation.entity.member.Member;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
 @Getter
+@Entity
 @NoArgsConstructor
-@Table(name = "TBL_MYCOUPON")
-public class MyCoupon{
+public class Likes {
     @Id @GeneratedValue
+    @EqualsAndHashCode.Include
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -20,18 +22,19 @@ public class MyCoupon{
     private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "COUPON_ID", nullable = false)
-    private Coupon coupon;
+    @JoinColumn(name = "ORDER_ID", nullable = false)
+    private Order order;
 
     @Builder
-    public MyCoupon(Member member, Coupon coupon) {
+    public Likes(Member member, Order order){
         this.member = member;
-        this.coupon = coupon;
+        this.order = order;
     }
 
-    public static MyCoupon of(Member member, Coupon coupon){
-        return MyCoupon.builder()
+    public static Likes of(Member member, Order order){
+        return Likes.builder()
                 .member(member)
-                .coupon(coupon).build();
+                .order(order)
+                .build();
     }
 }

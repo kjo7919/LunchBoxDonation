@@ -5,7 +5,7 @@ import lombok.Getter;
 import java.time.LocalDateTime;
 
 @Getter
-public class CouponrequestDto {
+public class CouponRequestDTO {
     private String coupon;
     private Integer price;
     private LocalDateTime startTime;
