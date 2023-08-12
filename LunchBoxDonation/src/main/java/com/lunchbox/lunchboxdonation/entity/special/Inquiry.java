@@ -1,4 +1,4 @@
-package com.lunchbox.lunchboxdonation.entity;
+package com.lunchbox.lunchboxdonation.entity.special;
 
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;
 import lombok.Builder;
