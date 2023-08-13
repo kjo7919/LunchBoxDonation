@@ -1,6 +1,7 @@
 package com.lunchbox.lunchboxdonation.entity.special;
 
 import com.lunchbox.lunchboxdonation.entity.Lunchbox.Lunchbox;
+import com.lunchbox.lunchboxdonation.entity.member.Member;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
