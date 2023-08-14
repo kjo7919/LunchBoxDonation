@@ -16,7 +16,7 @@ spring:
     open-in-view: false
     #  jpa
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 #
 #    #jpa format
 #    properties:
