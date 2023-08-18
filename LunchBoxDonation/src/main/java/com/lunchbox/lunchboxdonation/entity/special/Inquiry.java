@@ -1,4 +1,4 @@
-package com.lunchbox.lunchboxdonation.entity;
+package com.lunchbox.lunchboxdonation.entity.special;
 
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;
 import lombok.Builder;
@@ -12,6 +12,7 @@ import java.util.Date;
 @Entity
 @Getter @Setter @ToString
 @Table(name="TBL_INQUIRY")
+@NoArgsConstructor
 public class Inquiry {
 
     @Id

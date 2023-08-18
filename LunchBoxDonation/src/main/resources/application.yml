@@ -15,14 +15,14 @@ spring:
     defer-datasource-initialization: true
     open-in-view: false
     #  jpa
-#    hibernate:
-#      ddl-auto: create
+    hibernate:
+      ddl-auto: update
 #
 #    #jpa format
-#    properties:
-#      hibernate:
-#        format_sql: true
-#    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
 
   devtools:
     livereload:
@@ -47,5 +47,9 @@ spring:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
+#      location: C:/LunchBoxDonation/src/main/resources/static/img/
 
-file.uploadDir: C:/LunchBoxDonation
+
+file:
+ uploadDir: C:/LunchBoxDonation/
+
