@@ -314,7 +314,7 @@
               <li>
                 <a href="/mypage/orderlist" class="menu">주문관리</a>
                 <ul class="depth2">
-                  <li><a href="/mypage/orderlist">주문내역</a></li>
+                  <li><a href="/">주문내역</a></li>
                   <li class=""><a href="/mypage/oldOrderlist">이전 주문내역<span class="sub">(22.04.24 이전)</span></a></li>
                   <li><a href="/mypage/cancellist">취소/반품 내역</a></li>
                   <li class=""><a href="/mypage/routineDelivery">정기배송 관리</a></li>
@@ -459,7 +459,7 @@
             <div class="colum">
               <div class="list-title-area">
                 <h3 class="title-list">찜한상품</h3>
-                <a href="/mypage/wish/list" class="btn-link-txt2"><span>전체보기</span><i class="ico-arr-right"></i></a>
+                <a href="/activity_likes" class="btn-link-txt2"><span>전체보기</span><i class="ico-arr-right"></i></a>
               </div><!--// list-title-area -->
               <div class="order-list-area">
                 <div th:if="${likesList.isEmpty()}" class="no-data-type3">
@@ -476,14 +476,14 @@
               <!-- [Dev] 20210909 수정 : 포인트 > 상품후기 -->
               <div class="list-title-area">
                 <h3 class="title-list">상품후기</h3>
-                <a href="/mypage/prodReview/list" class="btn-link-txt2"><span>전체보기</span><i class="ico-arr-right"></i></a>
+                <a href="/activity_review" class="btn-link-txt2"><span>전체보기</span><i class="ico-arr-right"></i></a>
               </div><!--// list-title-area -->
               <div class="order-list-area">
                 <!-- [Dev] 20210909 추가 : 상품후기 없을 경우 -->
-                <div th:if="${reviews.empty}" class="no-data-type4">
+                <div th:if="${reviews.isEmpty()}" class="no-data-type4">
                   <p class="message">작성 가능한 후기가 없습니다.</p>
                 </div>
-                <div th:unless="${reviews.empty}">
+                <div th:unless="${reviews.isEmpty()}">
                   <ul>
                     <li th:each="review : ${reviews}">
                       <p th:text="${review.reviewContent}"></p>
