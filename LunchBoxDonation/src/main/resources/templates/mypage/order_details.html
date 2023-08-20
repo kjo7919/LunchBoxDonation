@@ -7,6 +7,7 @@
   <link rel="stylesheet" th:href="@{/css/myPage/css/common.css}">
   <link rel="stylesheet" th:href="@{/css/myPage/css/content.css}">
   <link rel="stylesheet" th:href="@{/css/myPage/css/regular.css}">
+  <link rel="stylesheet" th:href="@{/css/myPage/css/table.css}" />
 </th:block>
 
 <section layout:fragment="content">
@@ -411,77 +412,37 @@
 
       <div class="frame-right order-list-wrap">
         <div class="frame-cnt-inner">
-          <form id="myPageOrderList" name="myPageOrderList" action="/mypage/orderlist" method="get"><div class="menu-title-area">
+          <div class="menu-title-area">
             <h3 class="title-menu">주문내역</h3>
           </div><!--// menu-title-area -->
+          <div th:block="${not #lists.isEmpty(orderAddressList)}">
+            <table class="order-table">
+              <thead>
+              <tr>
+                <th>도시락번호</th>
+                <th>도시락명</th>
+                <th>도시락 주문금액</th>
+                <th>도시락 주문수량</th>
+                <th>회원번호</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr th:each="orderAddress : ${orderAddressList}" class="order-row">
+                <td th:text="${orderAddress.order.lunchbox.id}"></td>
+                <td th:text="${orderAddress.order.lunchbox.lunchboxTitle}"></td>
+                <td th:text="${orderAddress.order.orderPrice}"></td>
+                <td th:text="${orderAddress.order.orderQuantity}"></td>
+                <td th:text="${orderAddress.order.member.memberId}"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
 
-            <input type="hidden" name="srchFlag" value="Y">
-            <input type="hidden" name="nowPageNo" value="">
-            <div class="search-box">
-              <input type="radio" id="mypage-order-search-radio-period" class="date-setting" name="mypage-order-search-radio" value="PERIOD" checked="" style="display:none;">
-              <input type="hidden" id="mypage-order-search-period" name="periodOption" value="PERIOD">
-              <input type="hidden" id="mypage-order-search-start-date" name="dStartDtm" value="2023-06-23">
-              <input type="hidden" id="mypage-order-search-end-date" name="dEndDtm" value="2023-07-23">
-              <input type="hidden" id="mypage-order-search-startdate-year" data-value="2023">
-              <input type="hidden" id="mypage-order-search-startdate-month" data-value="06">
-              <input type="hidden" id="mypage-order-search-startdate-day" data-value="23">
-              <input type="hidden" id="mypage-order-search-enddate-year" data-value="2023">
-              <input type="hidden" id="mypage-order-search-enddate-month" data-value="07">
-              <input type="hidden" id="mypage-order-search-enddate-day" data-value="23">
-              <div class="search-detail">
-                <fieldset>
-                  <legend>상세 검색</legend>
-                  <div class="search-detail-top">
-                    <div class="search-detail-date-wrapper">
-                      <input type="text" readonly="" id="searchDateFrom" class="input-text hasDatepicker" value="2023-06-23">
-                      ~
-                      <input type="text" readonly="" id="searchDateTo" class="input-text hasDatepicker" value="2023-07-23">
-                    </div>
-                    <div class="search-detail-date-itemname">
-                      <div class="input-group w-full">
-                        <label for="item1-1" class="blind">검색</label>
-                        <input type="text" id="item1-1" name="srchProductNm" class="input-text" placeholder="주문 상품명 검색" value="">
-                        <span class="input-group-btn">
-                                        <button type="submit" class="btn-icon-search search-word" title=""><i class="ico-btn-search"></i><span class="blind">검색하기</span></button>
-                                    </span>
-                      </div><!--// input-group -->
-                    </div>
-                  </div>
-                  <div class="search-detail-filter">
-                    <div class="search-detail-filter-btn-group">
-                      <button type="button" class="detail-filter-btn active" value="1">1개월</button>
-                      <button type="button" class="detail-filter-btn" value="3">3개월</button>
-                      <button type="button" class="detail-filter-btn" value="6">6개월</button>
-                      <button type="button" class="detail-filter-btn" value="12">12개월</button>
-                    </div>
-                    <div class="search-detail-filter-end">
-                      <div class="input-group-form detail-filter-chk-group">
-                        <div class="custom-checkbox">
-                          <input type="checkbox" id="dlvTypeAll" class="checkbox type-dark dlvTypeAll" name="dlvTypeAll" value="N" checked=""><label for="dlvTypeAll">전체</label>
-                        </div>
-                        <div class="custom-checkbox">
-                          <input type="checkbox" id="dlvNrm" class="checkbox type-dark dlvType" name="dlvNrm" value="N" checked=""><label for="dlvNrm">일반배송</label>
-                        </div>
-                        <div class="custom-checkbox">
-                          <input type="checkbox" id="dlvRtn" class="checkbox type-dark dlvType" name="dlvRtn" value="N" checked=""><label for="dlvRtn">정기배송</label>
-                        </div>
-                      </div>
-                      <div class="input-group-form">
-                        <div class="input-group-btn dis-inb">
-                          <a href="javascript:;" onclick="onSubmitMyPageOrderSearch();" class="btn-form btn-black"><span>조회하기</span></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div><!--// search-detail-->
-            </div><!--// search-box -->
-          </form><div class="no-data-type1">
-          <p class="message">최근 1개월 내에 주문내역이 없습니다.</p>
-        </div>
+          <div class="no-data-type1" th:block="${#lists.isEmpty(orderAddressList)}">
+            <p class="message">주문내역이 없습니다.</p>
+          </div>
         </div><!--// frame-cnt-inner -->
-      </div><!--// frame-right -->
-
+      </div>
       <form id="command" name="deliveryPop" action="/mypage/orderlist" method="post"><input type="hidden" name="actionFlag" value="M">
         <input type="hidden" name="vDeliveryid">
         <input type="hidden" name="vOrderCd">
