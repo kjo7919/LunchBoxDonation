@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name='Viewport'    content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0'>
         <title>고구마 똥방구</title>
 
         <!-- 파비콘 -->	
-        <link rel='shortcut icon' href='./img/'>
-        <link rel='apple-touch-icon' href='./img/'>
+        <link rel='shortcut icon' href='../img'>
+        <link rel='apple-touch-icon' href='../img'>
         
         <!-- 스타일 -->
-        <link rel='stylesheet' href='./css/reset.css' type='text/css'>
-        <link rel='stylesheet' href='./css/fonts.css' type='text/css'>
-        <link rel='stylesheet' href='./css/response.css' type='text/css'>
-        <link rel='stylesheet' href='./css/style.css' type='text/css'>
-    
+        <link rel='stylesheet' href='/css/order/reset.css' type='text/css'>
+        <link rel='stylesheet' href='/css/order/fonts.css' type='text/css'>
+        <link rel='stylesheet' href='/css/order/response.css' type='text/css'>
+        <link rel="stylesheet" href="/css/order/style.css" type="text/css">
         <!-- js라이브러리 -->
-        <script src='./js/lib/jquery-1.12.4.min.js'></script>
-        <script src='./js/lib/jquery.easing.1.3.js'></script>
-        <script src='./js/lib/jquery.touchSwipe.js'></script>
+        <script src='../js/lib/jquery-1.12.4.min.js'></script>
+        <script src='../js/lib/jquery.easing.1.3.js'></script>
+        <script src='../js/lib/jquery.touchSwipe.js'></script>
         
     
         <!-- 각 브라우저 CSS호환 -->
-        <script src='./js/lib/prefixfree.min.js'></script>
+        <script src='../js/lib/prefixfree.min.js'></script>
 
         <!-- jQuery -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
@@ -49,7 +48,6 @@
                         </div>
 
                         <div class="content_wrap clearfix">
-                            <div class="contentL">
                                 <div>
                                     <div class="info_wrap orderInfo_wrap">
                                         <h3>주문자 정보</h3>
@@ -70,8 +68,8 @@
                                     <div class="address_list">
                                         <label class="labalL">주소</label>
                                         <div class="add">
-                                            <input type="text" class="addL" id="postcode" placeholder="우편번호" readonly>
-                                            <input type="text" class="addR" id="address" placeholder="기본주소" readonly>
+                                            <input type="text" class="addL" id="postcode" placeholder="우편번호" readonly> <!--우편번호-->
+                                            <input type="text" class="addR" id="address" placeholder="기본주소" readonly> <!--기본주소-->
                                             <button class="addbtn" onclick="execDaumPostcode()">검색</button>
                                         </div>
                                     </div>
@@ -79,8 +77,8 @@
                                         <label class="labalL">&nbsp;</label>
                                         <input type="text" class="dadd" id="detailAddress" placeholder="상세주소">
                                     </div>
-                                    
-                                    
+
+
                                     <div class="address_list">
                                         <label class="labalL">휴대전화</label>
                                         <div class="pnumber">
@@ -95,12 +93,18 @@
                                             </select>
                                             <input type="text" class="numberR">
                                         </div>
-                                        
+
                                     </div>
-                                    <div class="address_list">
-                                        <label class="labalL">전화번호</label>
-                                            <input type="text" class="nameR">
-                                    </div>
+
+<!--                                    <form action="/order/pwSearch" method="post">-->
+                                        <div>
+                                            <div class="address_list">
+                                                <label class="labalL">전화번호</label>
+                                                <input type="text" name="testContent" class="nameR">
+                                            </div>
+                                        </div>
+                                        <button type="submit">save</button>
+<!--                                    </form>-->
 
                                     <div class="useroderbox">
                                         <div class="userOrderList">
@@ -120,7 +124,7 @@
                                                 </div>
                                                 <div class="cart_list">
                                                     <div class="list1">
-                                                       <a href="#">맛있는닭 닭가슴살 스테이크 갈릭맛 100g</a> 
+                                                        <a href="#">맛있는닭 닭가슴살 스테이크 갈릭맛 100g</a>
                                                     </div>
                                                     <div class="list2">
                                                         10팩
@@ -134,7 +138,7 @@
                                                     <div class="tmoney">
                                                         18,000원
                                                     </div>
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="type3_inner">
@@ -159,7 +163,7 @@
                                                     <h4>주말/공휴일 택배수령</h4>
                                                 </div>
                                                 <div class="type4_radio">
-                                                    
+
                                                     <input class="radio" type="radio" id="radioY" name="radio">
                                                     <label for="radioY" class="radioY">
                                                         가능해YO
@@ -184,13 +188,14 @@
                                                 <input type="text" class="couponselect" placeholder="쿠폰 선택" readonly>
                                                 <button class="couponbtn" onclick="">선택</button>
                                             </div>
-                                            
+
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
-                            </div>
+                        </div>
+                        <div class="contentL">
                             <div class="contentR">
                                 <div>
                                     <div class="paymentInfo_wrap">
@@ -220,7 +225,7 @@
                                                     <span>21,500<i>원</i></span>
                                                 </li>
                                                 <li class="clearfix">
-                                                    <button class="payment_btn" onclick="requestPay()">
+                                                    <button class="payment_btn" onclick="requestPay()" type="submit">
                                                         결제하기
                                                     </button>
                                                 </li>
