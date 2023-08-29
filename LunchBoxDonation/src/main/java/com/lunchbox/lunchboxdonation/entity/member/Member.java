@@ -14,10 +14,8 @@ import javax.persistence.*;
 public class Member extends Timestamp {
 
     @Id
-
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id")
     @SequenceGenerator(name = "id", sequenceName = "member_sequence", allocationSize = 1)
-
     private Long id;
 
     @Column(unique = true,nullable = false)
