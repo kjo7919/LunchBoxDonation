@@ -36,7 +36,7 @@ public class BoLunchBoxController {
 
 //     도시락 목록
     @GetMapping("lunchboxList")
-    public ModelAndView lunchBoxList(@PageableDefault(size = 2, page = 0) Pageable pageable, LunchBoxSearch lunchBoxSearch) {
+    public ModelAndView lunchBoxList(@PageableDefault(size = 10, page = 0) Pageable pageable, LunchBoxSearch lunchBoxSearch) {
         ModelAndView mv = new ModelAndView();
 
         Page<LunchBoxDTO> lunchBoxList = lunchBoxService.lunchBoxList(pageable, lunchBoxSearch);
@@ -71,7 +71,8 @@ public class BoLunchBoxController {
         //DB에 도시락 정보 등록
         Long id = lunchBoxService.lunchBoxInsert(lunchBoxDTO);
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("redirect:lunchboxDetail/"+id);
+//        mv.setViewName("redirect:lunchboxDetail/"+id);
+        mv.setViewName("redirect:lunchboxWrite");
         return mv;
     }
 
