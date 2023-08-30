@@ -26,7 +26,7 @@ public class Member extends Timestamp {
 
     @Column(unique = true,nullable = false)
     private String memberName;
-    @Column(unique = true,nullable = false)
+    private int memberPoint;
     private String memberEmail;
     @Column(unique = true,nullable = false)
     private String memberPhoneNumber;
@@ -39,6 +39,7 @@ public class Member extends Timestamp {
         member.setMemberName(memberDTO.getMemberName());
         member.setMemberEmail(memberDTO.getMemberEmail());
         member.setMemberPhoneNumber(memberDTO.getMemberPhoneNumber());
+        member.setMemberPoint(memberDTO.getMemberPoint());
 
         return member;
     }
@@ -51,6 +52,7 @@ public class Member extends Timestamp {
         member.setMemberName(memberDTO.getMemberName());
         member.setMemberEmail(memberDTO.getMemberEmail());
         member.setMemberPhoneNumber(memberDTO.getMemberPhoneNumber());
+        member.setMemberPoint(memberDTO.getMemberPoint());
 
         return member;
     }
